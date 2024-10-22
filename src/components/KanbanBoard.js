@@ -41,7 +41,7 @@ function KanbanBoard({ tickets, users, grouping }) {
             <span className="status-count">{getTicketsByStatus(status).length}</span>
             <button className="add-card-btn">+</button>
             <button className="add-card-btn">
-              <img src='/untitled/icons_FEtask/3 dot menu.svg' alt='...' />
+              <img src='/untitled/icons_FEtask/3dotmenu.svg' alt='...' />
             </button>
           </div>
 
@@ -62,7 +62,7 @@ function KanbanBoard({ tickets, users, grouping }) {
             <span className="status-count">{getTicketsByUser(user.id).length}</span>
             <button className="add-card-btn">+</button>
             <button className="add-card-btn">
-              <img src='/untitled/icons_FEtask/3 dot menu.svg' alt='...' />
+              <img src='/untitled/icons_FEtask/3dotmenu.svg' alt='...' />
             </button>
           </div>
 
@@ -81,7 +81,7 @@ function KanbanBoard({ tickets, users, grouping }) {
             <span className="status-count">{getTicketsByPriority(priority).length}</span>
             <button className="add-card-btn">+</button>
             <button className="add-card-btn">
-              <img src='/untitled/icons_FEtask/3 dot menu.svg' alt='...' />
+              <img src='/untitled/icons_FEtask/3dotmenu.svg' alt='...' />
             </button>
           </div>
 
