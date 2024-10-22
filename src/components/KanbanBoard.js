@@ -32,7 +32,7 @@ function KanbanBoard({ tickets, users, grouping }) {
 
   return (
     <div className="kanban-board">
-      {/* Group by Status */}
+  
       {grouping === 'status' && statuses.map((status) => (
         <div key={status.name} className="kanban-column">
           <div className="status-column-header">
@@ -41,39 +41,38 @@ function KanbanBoard({ tickets, users, grouping }) {
             <span className="status-count">{getTicketsByStatus(status).length}</span>
             <button className="add-card-btn">+</button>
             <button className="add-card-btn">
-              <img src='/untitled/icons_FEtask/3 dot menu.svg' alt='menu' />
+              <img src='/untitled/icons_FEtask/3 dot menu.svg' alt='...' />
             </button>
           </div>
 
-          {/* Cards for this status */}
+         
           {getTicketsByStatus(status).map(ticket => (
             <TicketCard key={ticket.id} ticket={ticket} users={users} grouping={grouping} />
           ))}
         </div>
       ))}
 
-      {/* Group by User */}
+   
       {grouping === 'user' && users.map((user) => (
         <div key={user.id} className="kanban-column">
           <div className="status-column-header">
-            {/* Use the 'user' variable for user avatar */}
+          
             <img className="user-avatar" src={userAvatars[user.id]} alt={user.name} />
             <h4 className="status-name">{user.name}</h4>
             <span className="status-count">{getTicketsByUser(user.id).length}</span>
             <button className="add-card-btn">+</button>
             <button className="add-card-btn">
-              <img src='/untitled/icons_FEtask/3 dot menu.svg' alt='menu' />
+              <img src='/untitled/icons_FEtask/3 dot menu.svg' alt='...' />
             </button>
           </div>
 
-          {/* Cards for this user */}
+       
           {getTicketsByUser(user.id).map(ticket => (
             <TicketCard key={ticket.id} ticket={ticket} users={users} grouping={grouping} />
           ))}
         </div>
       ))}
 
-      {/* Group by Priority */}
       {grouping === 'priority' && priorities.map((priority) => (
         <div key={priority.value} className="kanban-column">
           <div className="status-column-header">
@@ -82,11 +81,11 @@ function KanbanBoard({ tickets, users, grouping }) {
             <span className="status-count">{getTicketsByPriority(priority).length}</span>
             <button className="add-card-btn">+</button>
             <button className="add-card-btn">
-              <img src='/untitled/icons_FEtask/3 dot menu.svg' alt='menu' />
+              <img src='/untitled/icons_FEtask/3 dot menu.svg' alt='...' />
             </button>
           </div>
 
-          {/* Cards for this priority */}
+         
           {getTicketsByPriority(priority).map(ticket => (
             <TicketCard key={ticket.id} ticket={ticket} users={users} grouping={grouping} />
           ))}
