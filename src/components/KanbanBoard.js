@@ -40,8 +40,8 @@ function KanbanBoard({ tickets, users, grouping }) {
             <h4 className="status-name">{status.name}</h4>
             <span className="status-count">{getTicketsByStatus(status).length}</span>
             <button className="add-card-btn">+</button>
-            <button className="add-card-btn">
-              <img src='/untitled/icons_FEtask/3dotmenu.svg' alt='...' />
+            <button className="add-card-btn pb-10" style={{ paddingBottom: '10px' }} >...
+              {/* <img src='/untitled/icons_FEtask/3dotmenu.svg' alt='...' /> ... */}
             </button>
           </div>
 
@@ -61,8 +61,8 @@ function KanbanBoard({ tickets, users, grouping }) {
             <h4 className="status-name">{user.name}</h4>
             <span className="status-count">{getTicketsByUser(user.id).length}</span>
             <button className="add-card-btn">+</button>
-            <button className="add-card-btn">
-              <img src='/untitled/icons_FEtask/3dotmenu.svg' alt='...' />
+            <button className="add-card-btn pb-10" style={{ paddingBottom: '10px' }} >...
+              {/* <img src='/untitled/icons_FEtask/3dotmenu.svg' alt='...' /> ... */}
             </button>
           </div>
 
@@ -80,8 +80,8 @@ function KanbanBoard({ tickets, users, grouping }) {
             <h4 className="status-name">{priority.level}</h4>
             <span className="status-count">{getTicketsByPriority(priority).length}</span>
             <button className="add-card-btn">+</button>
-            <button className="add-card-btn">
-              <img src='/untitled/icons_FEtask/3dotmenu.svg' alt='...' />
+            <button className="add-card-btn pb-10" style={{ paddingBottom: '10px' }} >...
+              {/* <img src='/untitled/icons_FEtask/3dotmenu.svg' alt='...' /> ... */}
             </button>
           </div>
 
