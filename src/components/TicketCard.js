@@ -34,9 +34,9 @@ function TicketCard({ ticket, users, grouping }) {
     <div className="ticket-card">
       <div className="ticket-header">
         <span className="ticket-id">{ticket.id}</span>
-        
-    
-        {grouping === 'status' && 'priority' && 'user' && assignedUser && (
+
+        {/* Always display the user avatar */}
+        {assignedUser && (
           <img
             className="user-avatar"
             src={userAvatars[assignedUser.id]}  
@@ -46,18 +46,8 @@ function TicketCard({ ticket, users, grouping }) {
         )}
       </div>
 
-      
       <div className="ticket-title-container">
-        {/* When grouping by status, display the priority icon */}
-        {/* {grouping === 'status' && (
-          <img
-            className="priority-icon"
-            src={priorityIcons[ticket.priority]}  // Get the priority icon dynamically
-            alt={`Priority ${ticket.priority}`}
-          />
-        )} */}
-
-        {/* When grouping by user or priority, display the status icon */}
+        {/* Show status icon when grouping by priority or user */}
         {(grouping === 'priority' || grouping === 'user') && (
           <img
             className="status-icon"
@@ -65,13 +55,14 @@ function TicketCard({ ticket, users, grouping }) {
             alt={ticket.status}
           />
         )}
-      
+
+        {/* Show the ticket title */}
         <h4 className="ticket-title">{ticket.title}</h4>
       </div>
 
       <div className="ticket-body">
         <div className="ticket-info">
-        
+          {/* Display the priority icon when grouping by status */}
           <img
             className="ticket-icon"
             src={priorityIcons[ticket.priority]} 
